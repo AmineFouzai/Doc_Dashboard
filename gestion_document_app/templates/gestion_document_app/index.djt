@@ -1,0 +1,13 @@
+{% extends 'gestion_document_app/base.djt' %}
+
+{% block content %}
+<div class="stat-continer">
+{% autoescape off %}
+{{div}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bokeh/2.0.2/bokeh.min.js" crossorigin="anonymous"></script>
+{{script}}
+
+{% endautoescape %}
+</div>
+
+{% endblock %}
