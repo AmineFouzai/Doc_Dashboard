@@ -27,11 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+#set allow low level access to account  
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'robotdjango@gmail.com'
-EMAIL_HOST_PASSWORD = 'logdatatxt'
+EMAIL_HOST_USER = 'user@gmail.com'
+EMAIL_HOST_PASSWORD = 'userpass'
 EMAIL_PORT = 587
 
 CORS_ORIGIN_ALLOW_ALL = True
