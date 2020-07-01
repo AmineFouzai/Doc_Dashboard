@@ -1,0 +1,22 @@
+{% extends 'gestion_document_app/base.djt' %}
+{%load static%}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'gestion_document_app/depot.css' %}">
+                
+				<div class="depot-form-continer" >
+				    <h1>Add Article</h1>
+                    <br>
+                    <form class="form-group" action={% url "add_article" %}  method="POST" >
+					    {{ form.as_p }}
+                        {% csrf_token %}
+    				<div class="depot-btn-container">
+						<input type="reset" class="btn btn-default p-3"  value="Cancel">
+						<input type="submit" class="btn btn-success" value="Add">
+					</div>
+    
+                </form>
+			</div>
+
+
+{% endblock content %}
