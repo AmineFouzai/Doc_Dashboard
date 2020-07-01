@@ -1,0 +1,34 @@
+{%extends 'accounts/base.djt'%}{%load static%} {%block content %}
+<link href={% static "accounts/css/Changepass.css" %} media="all" type="text/css" rel="stylesheet"> {%if error%}
+<div class="form-continer">
+    <div class="reset-password-place-holder">
+    <h1>Reset Password</h1>
+    </div> 
+
+    <form action={% url 'resetpass' uid=uid token=token %} method="post">
+
+        {%csrf_token%} {{form}}
+        <style>
+            .helptext {
+                display: contents;
+            }
+        </style>
+        <ul>
+            <li>The two password fields didn’t match</li>
+        </ul>
+        <button type="submit">submit</button>
+    </form>
+</div>
+{%else%}
+<div class="form-continer">
+<div class="reset-password-place-holder">
+<h1>Reset Password</h1>
+  </div> 
+    <form action={% url 'resetpass' uid=uid token=token %} method="post">
+
+        {%csrf_token%} {{form}}
+
+        <button type="submit">submit</button>
+    </form>
+</div>
+{%endif%} {%endblock content %}

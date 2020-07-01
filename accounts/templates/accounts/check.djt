@@ -1,0 +1,10 @@
+{%extends 'accounts/base.djt' %} {% load static%}{%block content %}
+<link href={% static "accounts/css/Check.css" %} media="all" type="text/css" rel="stylesheet"> {% if type %}
+<div class="text-continer">
+    <h1>Please check your email address to complete the Password Reset!</h1>
+</div>
+{%else%}
+<div class="text-continer">
+    <h1>Please confirm your email address to complete the Registration !</h1>
+</div>
+{%endif%} {%endblock content%}

@@ -1,0 +1,136 @@
+html{
+   background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(10).jpg")  no-repeat center center fixed !important; 
+  -webkit-background-size: cover!important;
+  -moz-background-size: cover!important;
+  -o-background-size: cover!important;
+  background-size: cover!important;
+}
+body {
+    overflow-y: auto;
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: #343434;
+
+}
+
+header {
+    text-transform: capitalize;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 20px;
+    line-height: 18px;
+    color: #343434;
+    box-sizing: border-box;
+    display: block;
+    min-height: 50px;
+    margin-bottom: 17px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    border-radius: 0;
+    top: 0;
+    background-color: #343434;
+    border: none;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+    justify-content: left;
+    justify-items: left;
+    align-items: left;
+}
+
+.nav-bar {
+    list-style-type: none !important;
+    display: grid;
+}
+
+nav {
+    position: relative;
+    left: 10rem;
+    display: grid;
+    margin: 0px;
+    padding: 0px;
+    width: 10rem;
+}
+
+img {
+    grid-row: 1;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.logo {
+    position: relative;
+    top: -2px;
+    grid-row: 1;
+    color: #333333;
+}
+
+.push {
+    -webkit-tap-highlight-color: transparent;
+    font-size: 13px;
+    line-height: 18px;
+    color: #343434;
+    box-sizing: border-box;
+    height: 9rem;
+}2222222222222
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

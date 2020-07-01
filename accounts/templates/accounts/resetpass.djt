@@ -1,0 +1,1 @@
+{% autoescape off %} Hi {{ user.username }}, Please click on the link to confirm your Password Restoration, http://{{ domain }}{% url 'resetpass' uid=uid token=token %} {% endautoescape %}

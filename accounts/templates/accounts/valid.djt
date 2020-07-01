@@ -1,0 +1,8 @@
+{%extends 'accounts/base.djt'%} {% load static%} {%block content %}
+<link href={% static "accounts/css/Check.css" %} media="all" type="text/css" rel="stylesheet">
+<div class="text-continer">
+    <center>
+        <h1>Validation Link Is Not Vaild</h1>
+    </center>
+</div>
+{%endblock content%}

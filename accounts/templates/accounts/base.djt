@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link href={% static "accounts/css/main.css" %} media="all" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+
+    {%block content%} {%endblock%}
+
+    <div class="push"></div>
+    <script src="https://kit.fontawesome.com/eed1138c91.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
