@@ -1,0 +1,2 @@
+# django_documents_dashboard
+django_documents_dashboard managing documents in teams
