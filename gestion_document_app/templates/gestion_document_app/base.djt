@@ -30,9 +30,6 @@
             <li><a href={% url "famille" %} >Famille</a></li>
 
         </ul>
-      </li>
-     
-        </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href={% url "logout" %}><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
