@@ -7,7 +7,7 @@ django_documents_dashboard managing documents in teams
 
 <table>
 <tr>
-<td> 1)  git clone https://github.com/MedAmineFouzai/django_auth</td>
+<td> 1)  git clone https://github.com/MedAmineFouzai/django_documents_dashboard/</td>
 </tr>
 <tr>
 <td> 2) cd django_auth</td>
