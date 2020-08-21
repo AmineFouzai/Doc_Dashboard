@@ -1,0 +1,45 @@
+{% extends 'gestion_document_app/base.djt' %}
+{%load static%}
+
+
+{% block content %}
+{% if error %}
+<style>
+	
+li{
+    color: red;
+    
+}
+
+</style>
+{% else%}
+
+<style>
+	
+	form li{
+		display: none;
+	}
+	
+	</style>
+{% endif %}
+
+    <link rel="stylesheet" href="{% static 'gestion_document_app/user.css' %}">
+                
+				<div class="depot-form-continer" >
+				    <h1>Add User</h1>
+                    <br>
+                    <form class="form-group" action={% url "add_users" %}  method="POST" >
+					    {{ form.as_p }}
+                        <label>I s Staff</label>
+                        <input type="checkbox"  name="staff" >
+                        {% csrf_token %}
+    				<div class="depot-btn-container">
+						<input type="reset" class="btn btn-default p-3"  value="Cancel">
+						<input type="submit" name="submit" class="btn btn-success" value="Add">
+					</div>
+    
+                </form>
+			</div>
+
+
+{% endblock content %}

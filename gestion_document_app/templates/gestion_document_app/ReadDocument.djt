@@ -1,0 +1,41 @@
+{% extends 'gestion_document_app/base.djt' %}
+{%load static%}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'gestion_document_app/depot.css' %}">
+                
+				<div class="depot-form-continer" >
+				    <h1>Document Details</h1>
+
+                    <br>
+                    <div class="details">
+                     <p>document_id  :{{doc.document_id}}</p>
+                     <p>document_piece : {{doc.document_piece}}</p>
+                    <p>document_type   :{{doc.document_type}}</p>
+                     <p>document_date  :{{doc.document_date}}</p>
+                     <p>fournisseur_id : {{doc.fournisseur_id}}</p>
+                    <p>document_devise   :{{doc.document_devise}}</p>
+                     <p>document_reference  :{{doc.document_reference}}</p>
+                     <p>document_validation1 : {{doc.document_validation1}}</p>
+                     <p> document_validation2 :{{doc.document_validation2}}</p>
+                      <p>numero_depot : {{doc.numero_depot}}</p>
+                      <p>document_date_livraison: {{doc.document_date_livraison}}</p>
+                     <p>document_cours  :{{doc.document_cours}}</p>
+                      <p>departement_id: {{doc.departement_id}}</p>
+                       <p>article_id:{{doc.article_id}}</p>
+                       <p>document_P_U_HT:{{doc.document_P_U_HT}}</p>
+                       <p>document_P_U_HT:{{doc.document_P_U_HT}}</p>
+                     <p> document_P_U_DEV :{{doc.document_P_U_DEV}}</p>
+                       <p>document_QT:{{doc.document_QT}}</p>
+                      <p>document_taxe :{{doc.document_taxe}}</p>
+                     <p>document_remise : {{doc.document_remise}}</p>
+                      <p>document_MT_HT :{{doc.document_MT_HT}}</p>
+                       <p>document_MT_TTC:{{doc.document_MT_TTC}}</p>
+					</div>
+                </div>
+                </form>
+			</div>
+
+
+{% endblock content %}

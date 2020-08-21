@@ -7,7 +7,7 @@
     body {
         color: #566787;
 		background: #f5f5f5;
-		font-family: 'Varela Round', sans-serif;
+	
 		font-size: 13px;
 	}
 	.table-wrapper {
@@ -223,6 +223,28 @@
 	.modal form label {
 		font-weight: normal;
 	}
+	
+	.notify {
+		content: '';
+		border-radius: 50%;
+		background-color: red;
+		width: 10px;
+		height: 10px;
+		position: relative;
+		top: 11px;
+		right: -67%;
+		z-index: 3;
+	}
+.detail{
+    color:#f9f9f9;
+    width:100%;
+	height: 100%;
+	border-width: 4ch;
+	margin:5px;
+	padding:1rem;
+
+}
+	
 </style>
 
 <script type="text/javascript">
@@ -259,7 +281,7 @@ function super_delete() {
 				console.log('not selected')
 			}
 		});
-		fetch('http://localhost:8000/famille/deletemany',{
+		fetch(`${window.location.href}deletemany`,{
 			"method":"POST",
 			"body":JSON.stringify({
 				todelete:selected
@@ -281,10 +303,10 @@ function super_delete() {
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Famille</h2>
+						<h2>Documents</h2>
 					</div>
 					<div class="col-sm-6">
-						<a href={%url "add_famille" %} class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add </span></a>
+						<a href={% url "add_document" %} class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add </span></a>
 						<a href="#" class="btn btn-danger" data-toggle="modal" onclick="super_delete()" ><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
 					</div>
                 </div>
@@ -298,36 +320,73 @@ function super_delete() {
 								<label for="selectAll"></label>
 							</span>
 						</th>
-                        <th>Numero Famille</th>
-                        <th>Intitule Famille</th>
+                        <th>Numero Document </th>
+                        <th>Document Piece</th>
+						<th>Type Document</th>
+                        <th>Date Document</th>
+                        <th>Fournisseur Id</th>
+						<th>Devise Document</th>
+						<th>Document Reference</th>
+						<th>Validation Document </th>
 						<th>Actions</th>
 
                     </tr>
                 </thead>
                 <tbody>
-				{% for famille in familles %}
-                    <tr>
+				{% for document in documents %}
+                  
+					<tr>
+					   
 						<td>
 							<span class="custom-checkbox">
-								<input type="checkbox" id="checkbox1" name="todelete" value={{famille.famille_id}}>
+								<input type="checkbox" id="checkbox1" name="todelete" value={{document.document_id}}>
 								<label for="checkbox1"></label>
 							</span>
 						</td>
-                        <td> {{	famille.famille_id }}</td>
-                        <td> {{ famille.famille_intitule }}</td>
-                        <td>
-							<form action={% url "update_famille" famille.famille_id %} method="GET">
-						   	
-                            <button  class="btn btn btn-info" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button>
+						  
+                        <td> <a  class="detail" href={% url 'details' document.document_id %}> {{document.document_id}}</a></td>
+                        <td> {{ document.document_piece }}</td>
+                        <td> {{ document.document_type }}</td>
+                        <td> {{ document.document_date }}</td>
+                        <td> {{ document.fournisseur_id }}</td>
+                        <td> {{ document.document_devise }}</td>
+						<td> {{ document.document_reference }}</td>
+						
+						{% if  document.document_validation1 and document.document_validation2 %}
+						  <td>
+                             <span class="glyphicon glyphicon-ok" style="color:green"></span>
+                          </td>
+						{% elif document.document_validation1 == True and document.document_validation2 == False  or document.document_validation1 == False and document.document_validation2 == True  %}
+							<td>
+                             <span class="	glyphicon glyphicon-eye-open" style="color:orange"></span>
+                          </td>
+
+						{% else %}
+  							 <td>
+                             <span class="glyphicon glyphicon-remove"  style="color:red"></span>
+                            </td>
+						{% endif %}
+                       
+						<td>
+						{% if document.document_validation1 == True and document.document_validation2 == False  or document.document_validation1 == False and document.document_validation2 == True  %}
+							<div class="notify"></div>
+							<form action={% url 'update_document' document.document_id %} method="GET">
+						{% else %}
+							<form action={% url 'update_document' document.document_id %} method="GET">
+						
+						{% endif %}   	
+
+                            <button class="btn btn btn-info" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button>
 							</form>
-							<form action={% url "delete_famille" famille.famille_id %} method="POST">
+							<form action={% url 'delete_document' document.document_id %} method="POST">
 						   		{% csrf_token %}
 						    	<button  class="btn btn-danger" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
 							
 							</form>
 						</td>
+						
                     </tr>
-
+					
                 {% endfor %}
 
                 </tbody>

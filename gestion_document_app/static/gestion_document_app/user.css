@@ -67,23 +67,7 @@ margin-top: 10px;
 margin-bottom: 0;
 }
 
-li{
-    color: red;
-}
 
-.details{
-    font-size: large;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    justify-self: center;
-    margin: 8px;
-    padding: 8px;
-    border: #343434 2px solid;
-}
-.details>p{
-    border: 1px solid black;
-    padding: 2px;
-    margin: 2px;
-    
+span{
+    display: none;
 }

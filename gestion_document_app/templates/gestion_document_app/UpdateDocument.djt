@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="{% static 'gestion_document_app/depot.css' %}">
                 
 				<div class="depot-form-continer" >
-				    <h1>Update Famille</h1>
+				    <h1>Update Document</h1>
                     <br>
-                    <form class="form-group" action={% url "update_famille" form.famille_id.value %}  method="POST" >
+                    <form class="form-group" action={% url "update_document" form.document_id.value %}  method="POST" >
 					    {% csrf_token %}
 						{{ form.as_p }}
                         

@@ -6,6 +6,8 @@ body{
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    font-size: 13px;
+
 }
 .push {
     -webkit-tap-highlight-color: transparent;
@@ -20,13 +22,22 @@ body{
 }
 
 
+.bk{
+    margin-right: 50px;
+
+}
+.bk-canvas-events{
+
+    margin-right: 10px;
+}
+
 .stat-continer{
     justify-content: center;
     justify-self: center;
     align-items: center;
     align-self: center;
     position: relative;
-    top: 20px;
+    top: 10px;
     text-transform: capitalize;
     -webkit-tap-highlight-color: transparent;
     font-size: 13px;
@@ -42,7 +53,15 @@ body{
     margin-left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 0);
-    width: 70%;
+    width: 95%;
+    overflow: scroll;
 }
 
+.well {
+    overflow: scroll;
+}
+
+#3e9ed2cb-bdba-402d-a44d-463152e364d3 {
+    width: 100%;
+    height: 100%;
 }

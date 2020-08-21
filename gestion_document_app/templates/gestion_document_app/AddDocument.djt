@@ -5,15 +5,14 @@
     <link rel="stylesheet" href="{% static 'gestion_document_app/depot.css' %}">
                 
 				<div class="depot-form-continer" >
-				    <h1>Update Famille</h1>
+				    <h1>Add Document</h1>
                     <br>
-                    <form class="form-group" action={% url "update_famille" form.famille_id.value %}  method="POST" >
-					    {% csrf_token %}
-						{{ form.as_p }}
-                        
+                    <form class="form-group" action={% url "add_document" %}  method="POST" >
+					    {{ form.as_p }}
+                        {% csrf_token %}
     				<div class="depot-btn-container">
 						<input type="reset" class="btn btn-default p-3"  value="Cancel">
-						<input type="submit" class="btn btn-success" value="Update">
+						<input type="submit" class="btn btn-success" value="Add">
 					</div>
     
                 </form>
