@@ -43,11 +43,23 @@ urlpatterns=[
 
 
     path('document/',views.document_handler,name="document"),
-    path('validation/',views.validation_handler,name="validation"),
-    path('suivalidation/',views.suivalidation_handler,name="suivalidation"),
+    path('document/add',views.add_document_handler,name="add_document"),
+    path('document/<int:_id>',views.delete_document_handler,name='delete_document'),
+    path('document/udpate/<int:_id>',views.update_document_handler,name="update_document"),
+    path('document/deletemany',views.delete_many_document),
+    path('document/get/<int:_id>',views.read_document_info,name="details"),
+
+    path('validation/',views.document_validation_handler,name="validation"),
+    path('validation/confirm1/<int:_id>',views.confirm_document_validation1_handler,name="confirm1"),
+    path('validation/cancel1/<int:_id>',views.cancel_document_validation1_handler,name="cancel1"),
+    path('validation/confirm2/<int:_id>',views.confirm_document_validation2_handler,name="confirm2"),
+    path('validation/cancel2/<int:_id>',views.cancel_document_validation2_handler,name="cancel2"),
 
 
-    # path('create/',views.create_blog_request,name="create"),
-    # path('<int:id>/delete',views.delete_post_handler,name="delete")
+    path('users/',views.user_handler,name="users"),
+    path('users/add',views.add_user_handler,name="add_users"),
+    path('users/<int:_id>',views.delete_user_handler,name='delete_user'),
+    
+
  
 ]+staticfiles_urlpatterns()
