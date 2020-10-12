@@ -1,4 +1,4 @@
-# django_documents_dashboard
+# Django_AllDocuments_Dashboard
 django_documents_dashboard managing documents in teams
 
 ------------------------------------
@@ -7,7 +7,7 @@ django_documents_dashboard managing documents in teams
 
 <table>
 <tr>
-<td> 1)  git clone https://github.com/MedAmineFouzai/django_documents_dashboard/</td>
+<td> 1)  git clone https://github.com/MedAmineFouzai/Django_AllDocuments_Dashboard/</td>
 </tr>
 <tr>
 <td> 2) cd django_auth</td>
