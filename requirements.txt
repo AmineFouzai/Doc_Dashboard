@@ -1,7 +1,7 @@
 asgiref==3.2.10
 bokeh==2.1.1
 certifi==2020.6.20
-Django==3.1.9
+Django==3.1.12
 django-cors-middleware==1.5.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
