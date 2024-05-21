@@ -8,7 +8,7 @@ MarkupSafe==1.1.1
 numpy==1.22.0
 packaging==20.4
 Pillow==10.3.0
-PyMySQL==0.9.3
+PyMySQL==1.1.1
 pyparsing==2.4.7
 python-dateutil==2.8.1
 pytz==2020.1
